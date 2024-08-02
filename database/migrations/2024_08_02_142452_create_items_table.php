@@ -16,6 +16,7 @@ return new class extends Migration
       $table->string('item_name')->unique();
       $table->string('item_description');
       $table->string('item_price');
+      $table->string('file');
       $table->timestamps();
     });
   }

@@ -106,6 +106,6 @@ class AuthController extends Controller
     $request->session()->regenerateToken();
 
     toastr()->success('You have been logged out');
-    return redirect('/auth/login');
+    return redirect('/login');
   }
 }
