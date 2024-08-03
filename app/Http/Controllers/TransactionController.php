@@ -38,6 +38,6 @@ class TransactionController extends Controller
 
     $transaction->delete();
 
-    return redirect()->route('home')->with('success', 'Transaction deleted successfully');
+    return redirect()->route('transaction')->with('success', 'Transaction deleted successfully');
   }
 }

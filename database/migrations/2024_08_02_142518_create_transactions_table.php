@@ -13,9 +13,10 @@ return new class extends Migration
   {
     Schema::create('transactions', function (Blueprint $table) {
       $table->id();
-      $table->foreignId('user_id')->constrained()->onDelete('cascade');
-      $table->foreignId('item_id')->constrained()->onDelete('cascade');
-
+      $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+      $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade')->onUpdate('cascade');
+      $table->unsignedBigInteger('user_id');
+      $table->unsignedBigInteger('item_id');
       $table->timestamps();
     });
   }

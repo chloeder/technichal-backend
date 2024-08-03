@@ -75,11 +75,11 @@
                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                 for="file_input">Upload file</label>
                             <input
-                                class="block w-full text-sm  border rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 @error('item_description') border-red-500 text-red-900 placeholder-red-700 @enderror"
+                                class="block w-full text-sm  border rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 @error('file') border-red-500 text-red-900 placeholder-red-700 @enderror"
                                 aria-describedby="file_input_help" id="file_input" type="file" name="file">
                             <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">SVG, PNG, JPG
                                 or GIF (MAX. 800x400px).</p>
-                            @error('item_description')
+                            @error('file')
                                 <p class="mt-2 text-sm text-red-600 dark:text-red-500">
                                     {{ $message }}
                                 </p>
